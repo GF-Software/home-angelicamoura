@@ -260,14 +260,17 @@ footer{background:var(--tinta);color:rgba(251,248,243,.7);padding:clamp(60px,9vh
 
 .gfv-selo:hover{opacity:1;transform:translateY(-2px)}
 .gfv-selo i{font-style:normal;opacity:.7}
-.card-img.ba img.d{animation:ba 7s ease-in-out infinite}
-@keyframes ba{0%,40%{opacity:0}50%,90%{opacity:1}100%{opacity:0}}
-.ba-tag{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:2;display:grid;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#fff;background:rgba(28,20,18,.45);padding:6px 14px;border-radius:99px;backdrop-filter:blur(4px)}
-.ba-tag i{grid-area:1/1;font-style:normal;text-align:center}
-.ba-tag i.d{animation:ba 7s ease-in-out infinite}
-.ba-tag i.a{animation:ba2 7s ease-in-out infinite}
-@keyframes ba2{0%,40%{opacity:1}50%,90%{opacity:0}100%{opacity:1}}
-@media (prefers-reduced-motion:reduce){.card-img.ba img.d,.ba-tag i.d{animation:none;opacity:1}.ba-tag i.a{animation:none;opacity:0}}
+.ad-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,28px);margin-top:clamp(70px,10vh,120px);align-items:start}
+.ad{margin:0}
+.ad-img{position:relative;aspect-ratio:1;overflow:hidden;border-radius:6px;background:var(--areia)}
+.ad-img img{width:100%;height:100%;object-fit:cover;display:block}
+.ad-tag{position:absolute;bottom:10px;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#fff;background:rgba(28,20,18,.45);padding:4px 9px;border-radius:99px;backdrop-filter:blur(4px)}
+.ad-tag.a{left:10px}.ad-tag.d{left:calc(50% + 10px)}
+.ad figcaption{display:flex;gap:10px;align-items:baseline;padding:14px 2px 0;font-family:var(--serif);font-size:18px;color:var(--bordo);line-height:1.25}
+.ad figcaption .rn{font-style:italic;color:var(--ouro)}
+.ad-nota{margin:26px 2px 0;font-size:12px;letter-spacing:.06em;color:var(--suave)}
+@media (max-width:1000px){.ad-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.ad-grid{grid-template-columns:1fr;gap:34px}}
 .cred{font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.72;margin:14px 0 0}
 /* ===== responsivo ===== */
 @media (max-width:1100px){
@@ -502,11 +505,18 @@ footer{background:var(--tinta);color:rgba(251,248,243,.7);padding:clamp(60px,9vh
       <span class="contorno"></span>
     </div>
     <ul class="revel-list">
-      <li class="up"><svg class="mono"><use href="#mono"/></svg><div><b>Antes &amp; depois</b><small>Casos reais, em cada tratamento.</small></div></li>
+      <li class="up"><svg class="mono"><use href="#mono"/></svg><div><b>Antes &amp; depois</b><small>Casos reais, com autorização.</small></div></li>
       <li class="up"><svg class="mono"><use href="#mono"/></svg><div><b>Depoimentos</b><small class="pend">Pendente — texto autorizado, com nome ou iniciais</small></div></li>
       <li class="up"><svg class="mono"><use href="#mono"/></svg><div><b>Resultados individuais</b><small>Cada pele responde de um jeito.</small></div></li>
     </ul>
   </div>
+  <div class="ad-grid">
+    <figure class="ad"><div class="ad-img"><img src="assets/img/ad-labial.jpg" alt="Antes e depois: Preenchimento labial" loading="lazy"><span class="ad-tag a">Antes</span><span class="ad-tag d">Depois</span></div><figcaption><span class="rn">i.</span>Preenchimento labial</figcaption></figure>
+    <figure class="ad"><div class="ad-img"><img src="assets/img/ad-contorno.jpg" alt="Antes e depois: Contorno facial · olheira, malar, mandíbula e mento" loading="lazy"><span class="ad-tag a">Antes</span><span class="ad-tag d">Depois</span></div><figcaption><span class="rn">ii.</span>Contorno facial · olheira, malar, mandíbula &amp; mento</figcaption></figure>
+    <figure class="ad"><div class="ad-img"><img src="assets/img/ad-rino.jpg" alt="Antes e depois: Rinomodelação, lábios e contorno" loading="lazy"><span class="ad-tag a">Antes</span><span class="ad-tag d">Depois</span></div><figcaption><span class="rn">iii.</span>Rinomodelação, lábios &amp; contorno</figcaption></figure>
+    <figure class="ad"><div class="ad-img"><img src="assets/img/ad-masculina.jpg" style="object-position:50% 22%" alt="Antes e depois: Harmonização masculina · mandíbula" loading="lazy"><span class="ad-tag a">Antes</span><span class="ad-tag d">Depois</span></div><figcaption><span class="rn">iv.</span>Harmonização masculina · mandíbula</figcaption></figure>
+  </div>
+  <p class="ad-nota">Casos reais, publicados com autorização. Resultados variam de pessoa para pessoa.</p>
 </section>
 
 <!-- 06 · A COLEÇÃO (serviços) — rolagem horizontal -->
@@ -525,10 +535,10 @@ footer{background:var(--tinta);color:rgba(251,248,243,.7);padding:clamp(60px,9vh
       <a class="card" href="#" data-wa="Bioestimulador de colágeno"><div class="card-img"><img src="https://img.magnific.com/free-photo/top-view-skin-oil-dropper_23-2148761490.jpg" alt="" loading="lazy"></div><div class="card-meta"><span class="rn">iii.</span><h3>Bioestimulador de colágeno</h3><span class="seta">→</span></div></a>
       <a class="card" href="#" data-wa="Toxina botulínica"><div class="card-img"><img src="assets/img/ig-077.jpg" alt="" loading="lazy" style="object-position:50% 30%"></div><div class="card-meta"><span class="rn">iv.</span><h3>Toxina botulínica</h3><span class="seta">→</span></div></a>
       <a class="card" href="#" data-wa="Área dos olhos"><div class="card-img"><img src="https://img.magnific.com/free-photo/silk-fabric-creme-material-home-decoration_23-2148516038.jpg" alt="" loading="lazy"></div><div class="card-meta"><span class="rn">v.</span><h3>Área dos olhos</h3><span class="seta">→</span></div></a>
-      <a class="card" href="#" data-wa="Preenchimento labial"><div class="card-img ba"><img class="b" src="assets/img/tr-labial-antes.jpg" alt="Antes" loading="lazy" style="object-position:50% 40%"><img class="d" src="assets/img/tr-labial-depois.jpg" alt="Depois" loading="lazy" style="object-position:50% 40%"><span class="ba-tag"><i class="a">Antes</i><i class="d">Depois</i></span></div><div class="card-meta"><span class="rn">vi.</span><h3>Preenchimento labial</h3><span class="seta">→</span></div></a>
-      <a class="card" href="#" data-wa="Contorno facial (malar, mandíbula e mento)"><div class="card-img ba"><img class="b" src="assets/img/tr-contorno-antes.jpg" alt="Antes" loading="lazy" style="object-position:50% 45%"><img class="d" src="assets/img/tr-contorno-depois.jpg" alt="Depois" loading="lazy" style="object-position:50% 45%"><span class="ba-tag"><i class="a">Antes</i><i class="d">Depois</i></span></div><div class="card-meta"><span class="rn">vii.</span><h3>Contorno facial · malar, mandíbula &amp; mento</h3><span class="seta">→</span></div></a>
-      <a class="card" href="#" data-wa="Rinomodelação"><div class="card-img ba"><img class="b" src="assets/img/tr-rino-antes.jpg" alt="Antes" loading="lazy" style="object-position:50% 36%"><img class="d" src="assets/img/tr-rino-depois.jpg" alt="Depois" loading="lazy" style="object-position:50% 36%"><span class="ba-tag"><i class="a">Antes</i><i class="d">Depois</i></span></div><div class="card-meta"><span class="rn">viii.</span><h3>Rinomodelação</h3><span class="seta">→</span></div></a>
-      <a class="card" href="#" data-wa="Harmonização masculina"><div class="card-img ba"><img class="b" src="assets/img/tr-masculina-antes.jpg" alt="Antes" loading="lazy" style="object-position:50% 36%"><img class="d" src="assets/img/tr-masculina-depois.jpg" alt="Depois" loading="lazy" style="object-position:50% 36%"><span class="ba-tag"><i class="a">Antes</i><i class="d">Depois</i></span></div><div class="card-meta"><span class="rn">ix.</span><h3>Harmonização masculina</h3><span class="seta">→</span></div></a>
+      <a class="card" href="#" data-wa="Preenchimento labial"><div class="card-img"><img src="https://img.magnific.com/free-photo/still-life-combination-makeup-texture_23-2150240921.jpg" alt="" loading="lazy"></div><div class="card-meta"><span class="rn">vi.</span><h3>Preenchimento labial</h3><span class="seta">→</span></div></a>
+      <a class="card" href="#" data-wa="Contorno facial (malar, mandíbula e mento)"><div class="card-img"><img src="assets/img/ela-04.jpg" alt="" loading="lazy" style="object-position:50% 35%"></div><div class="card-meta"><span class="rn">vii.</span><h3>Contorno facial · malar, mandíbula &amp; mento</h3><span class="seta">→</span></div></a>
+      <a class="card" href="#" data-wa="Rinomodelação"><div class="card-img"><img src="assets/img/ela-06.jpg" alt="" loading="lazy" style="object-position:50% 30%"></div><div class="card-meta"><span class="rn">viii.</span><h3>Rinomodelação</h3><span class="seta">→</span></div></a>
+      <a class="card" href="#" data-wa="Harmonização masculina"><div class="card-img"><img src="assets/img/ig-035.jpg" alt="" loading="lazy" style="object-position:58% 30%"></div><div class="card-meta"><span class="rn">ix.</span><h3>Harmonização masculina</h3><span class="seta">→</span></div></a>
     </div>
   </div>
 </section>
